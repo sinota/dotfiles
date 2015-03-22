@@ -11,7 +11,7 @@ rem Need Administrator privilege + password
 rem runas /user:administrator "mklink %DST%_vimrc %HERE%.vimrc"
 
 rem /Y: force overwrite
-copy /-Y %HERE%.vimrc %DST%_vimrc
+copy /-Y %HERE%.vimrc %DST%.vimrc
 
 
 pause
