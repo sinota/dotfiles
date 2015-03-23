@@ -1,0 +1,18 @@
+
+# confirm which file had loaded
+export HOME_BASHRC_LOADED=1
+
+export LANG=ja_JP.UTF-8
+
+# virtualbox command tool
+export PATH="$PATH:/d/Program Files/VirtualBox"
+
+alias cent6_start="VBoxManage.exe startvm \"CentOS-6.4-i386-Gnome\""
+alias cent6_suspend="VBoxManage.exe controlvm \"CentOS-6.4-i386-Gnome\" savestate"
+alias cent6_login="ssh shinsuke@192.168.56.12"
+
+alias cent5_start="VBoxManage.exe startvm \"CentOS-5.7\""
+alias cent5_suspend="VBoxManage.exe controlvm \"CentOS-5.7\" savestate"
+alias cent5_login="ssh shinsuke@192.168.56.13"
+
+

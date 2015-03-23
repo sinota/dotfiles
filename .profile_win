@@ -1,0 +1,17 @@
+
+# 
+export HOME_PROFILE_LOADED=1
+
+# display Japanese correctly
+alias ls='ls --color=auto --show-control-chars'
+
+# virtualbox command tool
+export PATH="$PATH:/d/Program Files/VirtualBox"
+
+alias vbox_centos_start="VBoxManage.exe startvm \"CentOS-6.4-i386-Gnome\""
+alias vbox_centos_suspend="VBoxManage.exe controlvm \"CentOS-6.4-i386-Gnome\" savestate"
+
+# login local working server
+alias vbox_login="ssh shinsuke@192.168.56.12"
+
+
