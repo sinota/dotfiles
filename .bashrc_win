@@ -16,3 +16,8 @@ alias cent5_suspend="VBoxManage.exe controlvm \"CentOS-5.7\" savestate"
 alias cent5_login="ssh shinsuke@192.168.56.13"
 
 
+# if [ -f /usr/bin/zsh ]; then
+#   exec /usr/bin/zsh
+# fi
+
+
