@@ -1,6 +1,6 @@
 
 # confirm which file had loaded
-export HOME_BASHRC_LOADED=1
+export _LOADED_RC="$_LOADED_RC:.bashrc"
 
 export LANG=ja_JP.UTF-8
 
@@ -14,6 +14,10 @@ alias cent6_login="ssh shinsuke@192.168.56.12"
 alias cent5_start="VBoxManage.exe startvm \"CentOS-5.7\""
 alias cent5_suspend="VBoxManage.exe controlvm \"CentOS-5.7\" savestate"
 alias cent5_login="ssh shinsuke@192.168.56.13"
+
+alias ubuntu_start="VBoxManage.exe startvm \"UbuntuWork\""
+alias ubuntu_suspend="VBoxManage.exe controlvm \"UbuntuWork\" savestate"
+alias ubuntu_login="ssh -p 20022 shinsuke@127.0.0.1"
 
 
 # if [ -f /usr/bin/zsh ]; then

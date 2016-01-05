@@ -1,3 +1,5 @@
+# check loaded
+export _LOADED_RC="$_LOADED_RC:.bash_profile"
 
 if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
