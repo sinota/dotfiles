@@ -20,6 +20,11 @@ alias ubuntu_suspend="VBoxManage.exe controlvm \"UbuntuWork\" savestate"
 alias ubuntu_login="ssh -p 20022 shinsuke@127.0.0.1"
 
 
+convert_to_mp4 () {
+	ffmpeg -i "$1" -vcodec copy -acodec copy "${1%.*}.mp4"
+}
+
+
 # if [ -f /usr/bin/zsh ]; then
 #   exec /usr/bin/zsh
 # fi
