@@ -1,0 +1,15 @@
+BoldAsFont=no
+BackgroundColour=10,10,10
+FontHeight=10
+CursorType=block
+CopyAsRTF=no
+Rows=66
+Locale=ja_JP
+Charset=UTF-8
+Font=Myrica M
+ForegroundColour=233,233,233
+Columns=92
+Term=xterm-256color
+WindowShortcuts=no
+CursorColour=255,255,255
+FontIsBold=yes

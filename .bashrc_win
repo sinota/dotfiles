@@ -24,6 +24,10 @@ convert_to_mp4 () {
 	ffmpeg -i "$1" -vcodec copy -acodec copy "${1%.*}.mp4"
 }
 
+ffmpeg_fast () {
+	bitrate=${2:-150k}
+	ffmpeg -i "$1" -vf "setpts=2/3*PTS" -af "atempo=1.5" -vcodec libx264 -preset slower -profile:v main -b $bitrate -qmax 51 -qmin 10 -keyint_min 10 -strict -2 "${1%.*}_fast.mp4"
+}
 
 # if [ -f /usr/bin/zsh ]; then
 #   exec /usr/bin/zsh
