@@ -1,0 +1,8 @@
+
+# FTPS; secure access
+set ftp:ssl-force on
+set ftp:ssl-protect-data on
+
+# avoid 'Not trusted' error
+set ssl:verify-certificate no
+
