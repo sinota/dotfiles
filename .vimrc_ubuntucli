@@ -1,0 +1,135 @@
+version 6.0
+if &cp | set nocp | endif
+let s:cpo_save=&cpo
+set cpo&vim
+nmap gx <Plug>NetrwBrowseX
+nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)
+let &cpo=s:cpo_save
+unlet s:cpo_save
+set backspace=indent,eol,start
+set history=200
+set nomodeline
+" set ruler
+set runtimepath=~/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
+" vim: set ft=vim :
+
+" Author: Shinsuke
+set encoding=utf-8
+scriptencoding utf-8
+
+set ignorecase
+set wrapscan
+set incsearch
+set hlsearch
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
+set smartindent
+set shiftround
+
+set wrap
+
+set wildmenu
+
+set showmatch
+set matchtime=2
+set matchpairs& matchpairs+=<:>
+
+set number
+set ruler
+
+set list
+set listchars=tab:»\ ,trail:-,extends:>,precedes:<,eol:¬
+
+set laststatus=2
+set showcmd
+
+set nobackup
+set writebackup
+
+
+" let mapleader = "&"  " define <Leader>
+
+
+filetype plugin indent on
+syntax enable
+
+
+" Plugins
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
+Plug 'thinca/vim-quickrun'
+Plug 'grep.vim'
+" Plug 'Townk/vim-autoclose'   " >>> lexima
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+Plug 'terryma/vim-expand-region'
+Plug 'tpope/vim-surround'
+" Plug 'open-browser'  " Error in install process
+Plug 'Shougo/unite.vim'
+Plug 'rking/ag.vim'  " Silver searcher interface 
+Plug 'cohama/lexima.vim'
+Plug 'kana/vim-operator-user'
+Plug 'kana/vim-textobj-user'
+" Plug 'rhysd/vim-operator-surround'
+Plug 'junegunn/vim-easy-align'
+
+Plug 'SirVer/ultisnips'
+" Snippets are separated from the engine. Add this if you want them:
+Plug 'honza/vim-snippets'
+
+" Python
+" Plug 'vim-flake8', { 'for': 'python' }
+Plug 'jmcantrell/vim-virtualenv'
+" HTML
+Plug 'othree/html5.vim'
+Plug 'mattn/emmet-vim'
+Plug 'tyru/operator-html-escape.vim', { 'for': 'html' }
+" CSS
+Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
+call plug#end()
+
+
+" ---- ---- Plugin settings ---- ----
+
+let g:virtualenv_directory='/media/removable/MYCARD/pyenv'
+
+let g:quickrun_config={ '_': {'outputter/buffer/split': ':botright'} }
+
+" Syntastic
+    " set statusline+=%#warningmsg#
+    " set statusline+=%{SyntasticStatuslineFlag()}
+    " set statusline+=%*
+
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_auto_loc_list = 1
+    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_wq = 0
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+
+" Start interactive EasyAlign in visual mode
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
+
+
+" Key maps
+
+nnoremap j gj
+vnoremap j gj
+nnoremap k gk
+vnoremap k gk
+nnoremap <Esc><Esc> :<C-u>nohlsearch<CR><Esc>
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+
+
