@@ -1,3 +1,7 @@
 export PATH=$PATH:/var/host/media/removable/MYCARD/usr/google_appengine
 
+export Input=~/Downloads/local/input.txt
+export Output=~/Downloads/local/output.txt
+
+
 PS1='\[\033[1;32m\][\t] \W/\[\033[0;37m\] \$ '

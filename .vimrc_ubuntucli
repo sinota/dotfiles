@@ -104,17 +104,32 @@ call plug#end()
 
 let g:virtualenv_directory='/media/removable/MYCARD/pyenv'
 
-let g:quickrun_config={ '_': {'outputter/buffer/split': ':botright'} }
+let g:quickrun_config={
+\   '_': {
+\       'outputter/buffer/split': ':botright'
+\   },
+\   "cpp": {
+\       "command": "g++",
+\       "cmdopt": "-std=c++11 -Wall",
+\       "hook/time/enable": 1
+\   },
+\}
 
 " Syntastic
     " set statusline+=%#warningmsg#
     " set statusline+=%{SyntasticStatuslineFlag()}
     " set statusline+=%*
 
-    let g:syntastic_always_populate_loc_list = 1
-    let g:syntastic_auto_loc_list = 1
-    let g:syntastic_check_on_open = 1
-    let g:syntastic_check_on_wq = 0
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+
+if executable('g++')
+    let g:syntastic_cpp_compiler = "g++"
+    let g:syntastic_cpp_compiler_options = "-std=c++11 -Wall"
+endif
+
 
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
@@ -135,6 +150,16 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 " let g:UltiSnipsEditSplit="vertical"
 
 
+" Filetype
+augroup MyFiletype
+    autocmd BufNewFile,BufRead *.{md} set filetype=markdown
+augroup END
+
+
+
+" Extend '%' jump   more>>> matchit.txt
+source $VIMRUNTIME/macros/matchit.vim
+
 
 " Key maps
 
@@ -145,5 +170,7 @@ vnoremap k gk
 nnoremap <Esc><Esc> :<C-u>nohlsearch<CR><Esc>
 vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
+
+nnoremap <Leader>qq :<C-u>bw! \[quickrun\ output\]<CR>
 
 
