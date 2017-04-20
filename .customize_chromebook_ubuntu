@@ -1,4 +1,4 @@
-export PATH=$PATH:/var/host/media/removable/MYCARD/usr/google_appengine
+export PATH=$PATH:/var/host/media/removable/MYCARD/usr/google_appengine:/var/host/media/removable/MYCARD/bin/node-v6.10.2-linux-armv7l/bin
 
 export Input=~/Downloads/local/input.txt
 export Output=~/Downloads/local/output.txt
