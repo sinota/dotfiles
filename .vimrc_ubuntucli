@@ -54,9 +54,17 @@ set writebackup
 
 " let mapleader = "&"  " define <Leader>
 
+" netrw settings
+" 3: tree view
+let g:netrw_liststyle = 3
+" let g:netrw_list_hide = 'CVS,\(^\|\s\s\)\zs\.\S\+'
+let g:netrw_altv = 1  " open file into the right
+let g:netrw_preview = 1  " open the preview window 
+
 
 filetype plugin indent on
 syntax enable
+
 
 
 " Plugins
@@ -97,6 +105,14 @@ Plug 'mattn/emmet-vim'
 Plug 'tyru/operator-html-escape.vim', { 'for': 'html' }
 " CSS
 Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
+
+" TypeScript
+" syntax
+Plug 'leafgarland/typescript-vim'
+" omni-completion
+Plug 'Quramy/tsuquyomi'
+
+
 call plug#end()
 
 
