@@ -1,3 +1,5 @@
+alias ls="ls --color=auto -F"
+
 alias syncfile="/media/removable/MYCARD/Documents/Tool/sync_documents.sh"
 alias remountsd="sudo mount -o remount,exec /media/removable/MYCARD"
 alias enterpy3="source /media/removable/MYCARD/pyenv/py34/bin/activate"

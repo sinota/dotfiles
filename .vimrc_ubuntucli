@@ -108,9 +108,15 @@ Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 
 " TypeScript
 " syntax
-Plug 'leafgarland/typescript-vim'
+Plug 'leafgarland/typescript-vim', { 'for': 'ts' }
 " omni-completion
-Plug 'Quramy/tsuquyomi'
+Plug 'Quramy/tsuquyomi', { 'for': 'ts' }
+
+" Reference
+Plug 'thinca/vim-ref', { 'for': ['php', 'python'] }
+
+" Taglist
+Plug 'vim-scripts/taglist.vim', { 'for': ['php', 'python'] }
 
 
 call plug#end()
@@ -165,10 +171,15 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 " If you want :UltiSnipsEdit to split your window.
 " let g:UltiSnipsEditSplit="vertical"
 
+" vim-ref settings
+let g:ref_phpmanual_path = $HOME . '/.vim/refs/php-chunked-xhtml'
+
+
 
 " Filetype
 augroup MyFiletype
     autocmd BufNewFile,BufRead *.{md} set filetype=markdown
+    autocmd BufNewFile,BufRead *.jj.html set filetype=jinja2.html
 augroup END
 
 
