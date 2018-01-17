@@ -1,5 +1,6 @@
 
 alias ll='ls --show-control-char --color=auto -F'
+alias lll='ls --show-control-char --color=auto -F -lta'
 
 alias w3mbookmark="w3m -B"
 alias tmux="tmux -u"
