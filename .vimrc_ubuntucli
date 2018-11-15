@@ -10,7 +10,6 @@ set backspace=indent,eol,start
 set history=200
 set nomodeline
 " set ruler
-set runtimepath=~/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 " vim: set ft=vim :
 
@@ -73,7 +72,7 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/syntastic'
 Plug 'thinca/vim-quickrun'
-Plug 'grep.vim'
+" Plug 'grep.vim'
 " Plug 'Townk/vim-autoclose'   " >>> lexima
 " Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
@@ -185,7 +184,7 @@ augroup END
 
 
 " Extend '%' jump   more>>> matchit.txt
-source $VIMRUNTIME/macros/matchit.vim
+" source $VIMRUNTIME/macros/matchit.vim
 
 
 " Key maps
