@@ -107,9 +107,9 @@ Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 
 " TypeScript
 " syntax
-Plug 'leafgarland/typescript-vim', { 'for': 'ts' }
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 " omni-completion
-Plug 'Quramy/tsuquyomi', { 'for': 'ts' }
+Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
 
 " Reference
 Plug 'thinca/vim-ref', { 'for': ['php', 'python'] }

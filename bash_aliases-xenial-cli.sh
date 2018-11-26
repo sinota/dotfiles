@@ -1,3 +1,5 @@
+export LANG=C.UTF-8
+
 # alias ls="ls --color=auto -F"
 
 alias remountsd="sudo mount -o remount,exec /media/removable/MYCARD"

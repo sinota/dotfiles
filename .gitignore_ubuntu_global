@@ -1,0 +1,8 @@
+*.swp
+*.swo
+*.o
+*.pyc
+*.pyo
+tags
+
+__pycache__/
