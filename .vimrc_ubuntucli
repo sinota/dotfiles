@@ -8,7 +8,7 @@ let &cpo=s:cpo_save
 unlet s:cpo_save
 set backspace=indent,eol,start
 set history=200
-set nomodeline
+set modeline
 " set ruler
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 " vim: set ft=vim :
@@ -49,6 +49,9 @@ set showcmd
 
 set nobackup
 set writebackup
+
+set background=dark
+highlight Visual cterm=reverse ctermbg=NONE
 
 
 " let mapleader = "&"  " define <Leader>
