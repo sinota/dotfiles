@@ -11,3 +11,5 @@ alias g++11="g++ -std=c++11"
 alias aptse="apt-cache search"
 alias aptsh="apt-cache show"
 
+alias iconvus="iconv -f UTF-8 -t Shift_JIS"
+alias iconvsu="iconv -f Shift_JIS -t UTF-8"

@@ -17,6 +17,8 @@ set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.i
 set encoding=utf-8
 scriptencoding utf-8
 
+set helplang=ja,en
+
 set ignorecase
 set wrapscan
 set incsearch
@@ -53,6 +55,7 @@ set writebackup
 set background=dark
 highlight Visual cterm=reverse ctermbg=NONE
 
+set foldmethod=indent
 
 " let mapleader = "&"  " define <Leader>
 
@@ -61,7 +64,7 @@ highlight Visual cterm=reverse ctermbg=NONE
 let g:netrw_liststyle = 3
 " let g:netrw_list_hide = 'CVS,\(^\|\s\s\)\zs\.\S\+'
 let g:netrw_altv = 1  " open file into the right
-let g:netrw_preview = 1  " open the preview window 
+let g:netrw_preview = 1  " open the preview window
 
 
 filetype plugin indent on
@@ -71,7 +74,7 @@ syntax enable
 
 " Plugins
 call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+" Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/syntastic'
 Plug 'thinca/vim-quickrun'
@@ -83,7 +86,8 @@ Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-surround'
 " Plug 'open-browser'  " Error in install process
 Plug 'Shougo/unite.vim'
-Plug 'rking/ag.vim'  " Silver searcher interface 
+Plug 'Shougo/unite-outline'
+Plug 'rking/ag.vim'  " Silver searcher interface
 Plug 'cohama/lexima.vim'
 Plug 'kana/vim-operator-user'
 Plug 'kana/vim-textobj-user'
@@ -144,10 +148,14 @@ let g:quickrun_config={
     " set statusline+=%{SyntasticStatuslineFlag()}
     " set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_always_populate_loc_list = 0
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+
+let g:syntastic_mode_map = {
+    \ "mode": "active",
+    \ "passive_filetypes": ["html"] }
 
 if executable('g++')
     let g:syntastic_cpp_compiler = "g++"
@@ -187,7 +195,7 @@ augroup END
 
 
 " Extend '%' jump   more>>> matchit.txt
-" source $VIMRUNTIME/macros/matchit.vim
+source $VIMRUNTIME/macros/matchit.vim
 
 
 " Key maps
