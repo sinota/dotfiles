@@ -25,8 +25,8 @@ set incsearch
 set hlsearch
 
 set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set softtabstop=0
+set shiftwidth=0
 set expandtab
 set autoindent
 set smartindent
@@ -155,12 +155,16 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_mode_map = {
     \ "mode": "active",
-    \ "passive_filetypes": ["html"] }
+    \ "passive_filetypes": ["html", "javascript"] }
+
+let g:syntastic_javascript_checkers = ['eslint']
 
 if executable('g++')
     let g:syntastic_cpp_compiler = "g++"
     let g:syntastic_cpp_compiler_options = "-std=c++11 -Wall"
 endif
+
+nnoremap <S-s> :w<CR>:SyntasticCheck<CR>
 
 
 " Add spaces after comment delimiters by default
@@ -188,6 +192,7 @@ let g:ref_phpmanual_path = $HOME . '/.vim/refs/php-chunked-xhtml'
 
 " Filetype
 augroup MyFiletype
+    autocmd!
     autocmd BufNewFile,BufRead *.{md} set filetype=markdown
     autocmd BufNewFile,BufRead *.jj.html set filetype=jinja2.html
 augroup END

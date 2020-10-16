@@ -2,6 +2,8 @@ export LANG=C.UTF-8
 
 # alias ls="ls --color=auto -F"
 
+alias mv="mv -i"
+
 alias remountsd="sudo mount -o remount,exec /media/removable/MYCARD"
 alias enterpy35="source /media/removable/MYCARD/pyenv/py35/bin/activate"
 alias w3mbookmark="w3m -B"
